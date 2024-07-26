@@ -538,7 +538,7 @@ button {
 /* #endregion */
 
 /* #region Footer */
-.footer {
+c .footer {
   padding: 100px 0;
   background-color: #2e2f42;
 }
@@ -615,6 +615,126 @@ button {
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.32px;
+}
+
+/* #endregion */
+
+/* #region Modal Form */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(46, 47, 66, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 408px;
+  min-height: 584px;
+  padding: 24px;
+  border-radius: 4px;
+  background: var(--DAIRY, #fcfcfc);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.modal-close-icon {
+}
+
+.modal-caption {
+  max-width: 360px;
+  margin-bottom: 34px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+}
+
+.modal-form {
+}
+
+.modal-form-field {
+  margin-bottom: 8px;
+}
+
+.modal-form-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #8e8f99;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+}
+
+.modal-form-wrapper {
+  position: relative;
+}
+
+.modal-form-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 16px 38px;
+  border-radius: 4px;
+  border: 1px solid rgba(142, 143, 153, 1);
+  outline: transparent;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color;
+}
+
+.modal-form-input:focus {
+  border-color: rgba(77, 90, 229, 1);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: none;
+  stroke: rgba(46, 47, 66, 1);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  stroke: rgba(77, 90, 229, 1);
+}
+
+.modal-form-comment {
+}
+
+.modal-form-agreement {
+}
+
+.modal-form-description {
+}
+
+.modal-form-checkbox {
+}
+
+.modal-form-checkbox-icon {
+}
+
+.modal-form-link {
 }
 
 /* #endregion */
