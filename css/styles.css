@@ -263,7 +263,7 @@ button {
   text-align: center;
   color: var(--primary-white-color);
 }
-.hero-btn {
+.btn-accent {
   display: block;
   margin: 0 auto;
   min-width: 169px;
@@ -282,7 +282,7 @@ button {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
 }
-.hero-btn:hover {
+.btn-accent:hover {
   background-color: var(--secondary-accent-color);
 }
 .hero-btn:focus {
