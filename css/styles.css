@@ -730,9 +730,12 @@ button {
 .modal-close-btn:hover {
   background-color: #404bbf;
   border: none;
+  fill: #ffffff;
 }
+
 .modal-close-btn:focus {
   background-color: #404bbf;
+  fill: #ffffff;
 }
 
 .modal-close-icon {
@@ -754,7 +757,7 @@ button {
 }
 
 .modal-form-field {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .modal-form-label {
@@ -805,9 +808,9 @@ button {
   fill: #4d5ae5;
 } */
 
-/* .modal-form-field:nth-child(4) {
+.fourth {
   margin-bottom: 16px;
-} */
+}
 
 .modal-form-comment {
   display: block;
