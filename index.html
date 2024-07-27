@@ -480,6 +480,26 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe">
+          <p class="footer-subscribe-text">Subscribe</p>
+          <form class="footer-form" for="footer_subscribe">
+            <label class="footer-form-label">
+              <input
+                class="footer-input"
+                type="email"
+                name="user_subsribe"
+                id="user_subsribe"
+              />
+              E-mail
+            </label>
+            <button class="footer-form-btn">
+              Subscribe
+              <svg class="footer-socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- #endregion -->
@@ -512,7 +532,7 @@
             </div>
           </div>
           <div class="modal-form-field">
-            <label class="modal-form-label" for="user_email">Phone</label>
+            <label class="modal-form-label" for="user_phone">Phone</label>
             <div class="modal-form-wrapper">
               <input
                 class="modal-form-input"
@@ -526,7 +546,7 @@
             </div>
           </div>
           <div class="modal-form-field">
-            <label class="modal-form-label" for="user_tel">Email</label>
+            <label class="modal-form-label" for="user_email">Email</label>
             <div class="modal-form-wrapper">
               <input
                 class="modal-form-input"
@@ -553,6 +573,7 @@
           </div>
           <div class="modal-form-agreement">
             <input
+              class="visually-hidden"
               type="checkbox"
               name="user_agreement"
               id="user_agreement"
@@ -561,7 +582,7 @@
             <label class="modal-form-description" for="user_agreement">
               <span class="modal-form-checkbox">
                 <svg class="modal-form-checkbox-icon" width="10" height="8">
-                  <use href="./images/icons.svg#checkmark"></use>
+                  <use href="./images/icons.svg#checked"></use>
                 </svg>
               </span>
               I accept the terms and conditions of the
