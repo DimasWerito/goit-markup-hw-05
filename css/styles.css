@@ -632,32 +632,51 @@ button {
   letter-spacing: 0.32px;
 }
 
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
 .footer-input {
   width: 264px;
   height: 40px;
-  background-color: #2e2f42;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  background-color: transparent;
+  color: #ffffff;
   border-radius: 4px;
   border: 1px solid #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .footer-input::placeholder {
-  color: var(--WHITE, #fff);
-  font-family: Roboto;
+  color: #ffffff;
   font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 24px; /* 200% */
   letter-spacing: 0.48px;
 }
 
-.footer-form {
-}
 .footer-form-label {
 }
 .footer-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 165px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
 }
 .footer-socials-icon {
+  margin-left: 16px;
 }
 
 /* #endregion */
