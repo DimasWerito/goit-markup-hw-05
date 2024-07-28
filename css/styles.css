@@ -737,11 +737,10 @@ button {
 }
 
 .modal-close-btn:hover {
-  background-color: #404bbf;
   border: none;
-  fill: #ffffff;
 }
 
+.modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
   fill: #ffffff;
