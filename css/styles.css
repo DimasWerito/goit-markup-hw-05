@@ -844,6 +844,7 @@ button {
   line-height: 1.17;
 }
 
+.modal-form-comment:active,
 .modal-form-comment:focus,
 .modal-form-comment:focus-within {
   border-color: #4D5AE5;
