@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 :root {
   box-sizing: border-box;
   --primary-font: "Roboto", sans-serif;
@@ -84,13 +88,33 @@ button {
 }
 
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  min-width: 320px;
+  max-width: 375px;
+  padding: 16px;
   margin: 0 auto;
+
+  /* width: 1440px;
+  padding: 0 156px;
+  margin: 0 auto; */
 
   outline: 2px solid red;
   outline-offset: -2px;
 }
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 156px;
+  }
+}
+
 /* Card Set */
 
 .card-set {
@@ -114,12 +138,7 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.header .container {
-  display: flex;
-  align-items: center;
-}
-
-.header-nav {
+с .header-nav {
 }
 .nav {
   display: flex;
@@ -127,11 +146,12 @@ button {
   justify-content: space-between;
 }
 .logo {
+  padding: 17px 0;
   margin-right: 76px;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--primary-accent-color);
   font-family: var(--title-font);
@@ -146,6 +166,19 @@ button {
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
+
+@media only screen and (max-width: 767px) {
+  .nav-list {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .nav-list {
+    gap: 40px;
+  }
+}
+
 .nav-item {
   position: relative;
   display: block;
@@ -198,6 +231,13 @@ button {
   letter-spacing: 0.02em;
   color: var(--primary-black-color);
 }
+
+@media only screen and (max-width: 767px) {
+  .header-address-list {
+    display: none;
+  }
+}
+
 .header-address {
   margin-left: auto;
 }
@@ -297,7 +337,13 @@ button {
 
 /* #region Benefits */
 .benefits {
-  padding: 120px 0;
+  padding: 96px 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .benefits {
+    padding: 120px 0;
+  }
 }
 
 .visually-hidden {
@@ -315,24 +361,52 @@ button {
 
 .benefits-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
   justify-content: center;
+  gap: 72px;
+  row-gap: 24;
 }
 
-.benefits-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 112px;
-  padding: 24px 0;
-  margin-bottom: 8px;
-  border-radius: 4px;
-  border: 1px solid var(--LIGHT-SLATE, #8e8f99);
-  background: var(--CLOUD, #f4f4fd);
+@media only screen and (min-width: 768px) {
+  .benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 72px;
+  }
 }
+
+@media only screen and (min-width: 1440px) {
+  .benefits-list {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .benefits-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    padding: 24px 0;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--LIGHT-SLATE, #8e8f99);
+    background: var(--CLOUD, #f4f4fd);
+  }
+}
+
 .benefits-item {
+  position: relative;
   width: 264px;
 }
+
+@media only screen and (max-width: 1440px) {
+  .benefits-icon {
+    display: none;
+  }
+}
+
 .benefits-subtitle {
   margin-bottom: 8px;
   font-weight: 500;
@@ -902,6 +976,37 @@ input[type="checkbox"]:checked
 
 .modal-form-link {
   color: #4d5ae5;
+}
+
+/* #endregion */
+
+/* #region Mobile Menu */
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.mobile-menu {
+}
+.mobile-menu-btn {
+}
+.mobile-menu-icon {
+}
+.mobile-menu-list {
+}
+.mobile-menu-item {
+}
+.mobile-menu-link {
+}
+.mobile-menu-contacts {
+}
+
+.mobile-socials-icon {
 }
 
 /* #endregion */

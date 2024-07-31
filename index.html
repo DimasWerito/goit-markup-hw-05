@@ -25,6 +25,39 @@
       <div class="container">
         <nav class="header-nav nav">
           <a class="logo" href="#">Web<span class="accent">Studio</span></a>
+          <button
+            class="menu-btn header-menu btn"
+            type="button"
+            aria-label="Open mobile menu button"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.59961 6.00078C3.59961 5.68252 3.72604 5.3773 3.95108 5.15225C4.17612 4.92721 4.48135 4.80078 4.79961 4.80078H19.1996C19.5179 4.80078 19.8231 4.92721 20.0481 5.15225C20.2732 5.3773 20.3996 5.68252 20.3996 6.00078C20.3996 6.31904 20.2732 6.62427 20.0481 6.84931C19.8231 7.07435 19.5179 7.20078 19.1996 7.20078H4.79961C4.48135 7.20078 4.17612 7.07435 3.95108 6.84931C3.72604 6.62427 3.59961 6.31904 3.59961 6.00078Z"
+                fill="#2F2F37"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.59961 12.0008C3.59961 11.6825 3.72604 11.3773 3.95108 11.1523C4.17612 10.9272 4.48135 10.8008 4.79961 10.8008H19.1996C19.5179 10.8008 19.8231 10.9272 20.0481 11.1523C20.2732 11.3773 20.3996 11.6825 20.3996 12.0008C20.3996 12.319 20.2732 12.6243 20.0481 12.8493C19.8231 13.0744 19.5179 13.2008 19.1996 13.2008H4.79961C4.48135 13.2008 4.17612 13.0744 3.95108 12.8493C3.72604 12.6243 3.59961 12.319 3.59961 12.0008Z"
+                fill="#2F2F37"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.59961 18.0008C3.59961 17.6825 3.72604 17.3773 3.95108 17.1523C4.17612 16.9272 4.48135 16.8008 4.79961 16.8008H19.1996C19.5179 16.8008 19.8231 16.9272 20.0481 17.1523C20.2732 17.3773 20.3996 17.6825 20.3996 18.0008C20.3996 18.319 20.2732 18.6243 20.0481 18.8493C19.8231 19.0744 19.5179 19.2008 19.1996 19.2008H4.79961C4.48135 19.2008 4.17612 19.0744 3.95108 18.8493C3.72604 18.6243 3.59961 18.319 3.59961 18.0008Z"
+                fill="#2F2F37"
+              />
+            </svg>
+          </button>
           <ul class="nav-list">
             <li class="nav-item">
               <a class="nav-link active" href="./index.html">Studio</a>
@@ -55,7 +88,7 @@
 
     <main>
       <!-- #region Hero-->
-      <section class="hero">
+      <section class="hero hide">
         <div class="container hero-content">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="btn btn-accent" type="button">Order Service</button>
@@ -122,7 +155,7 @@
       <!-- #endregion -->
 
       <!-- #region Our Team-->
-      <section class="team">
+      <section class="team hide">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list card-set">
@@ -304,7 +337,7 @@
       <!-- #endregion -->
 
       <!-- #region Portfolio -->
-      <section class="portfolio">
+      <section class="portfolio hide">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list card-set">
@@ -435,7 +468,7 @@
     <!-- #endregion -->
 
     <!-- #region Footer -->
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <div class="footer-content">
           <a class="footer-logo" href="./index.html"
@@ -592,6 +625,89 @@
       </div>
     </div>
 
+    <!-- #endregion -->
+
+    <!-- #region Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <button
+        class="mobile-menu-btn"
+        type="button"
+        aria-label="Mobile menu close button"
+      >
+        <svg class="mobile-menu-icon" width="8" height="8">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#">Contacts</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu-contacts">
+        <li><a href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+        <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+      </ul>
+      <ul class="socials-list">
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Instagram site"
+          >
+            <svg class="footer-socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Twitter site"
+          >
+            <svg class="footer-socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Facebook site"
+          >
+            <svg class="footer-socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Facebook site"
+          >
+            <svg class="mobile-socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
     <!-- #endregion -->
   </body>
 </html>
