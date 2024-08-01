@@ -500,6 +500,8 @@ button {
 
 .team-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .team-item {
@@ -594,37 +596,56 @@ button {
 }
 
 .portfolio-title {
-  margin: 0 auto 72px;
+  font-family: var(--font-family);
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 111%;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #2e2f42;
-  text-transform: capitalize;
+  color: var(--navy-blue);
+  margin-bottom: 72px;
+}
+
+.portfolio-block {
+  max-width: 1128px;
+}
+
+.portfolio-row {
 }
 
 .portfolio-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-row-gap: 40px ;
 }
+
 
 .portfolio-item {
-  width: calc(33.333% - 24px);
-  box-sizing: border-box;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 360px;
+  height: 420px;
+  background: var(--white);
 }
 
-.portfolio-wrapper {
+.portfolio-img {
   position: relative;
   overflow: hidden;
 }
 
-.overlay {
+.portfolio-info {
+  border-bottom: 1px solid var(--cornflower);
+  border-left: 1px solid var(--cornflower);
+  border-right: 1px solid var(--cornflower);
+  padding: 32px 16px;
+  max-width: 360px;
+  height: 120px;
+}
+
+.portfolio-text {
+}
+
+
+.portfolio-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -632,53 +653,44 @@ button {
   align-items: center;
   justify-content: center;
   padding: 40px 32px;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   color: #f4f4fd;
   font-size: 16px;
-  line-height: 1.5; /* 150% */
+  line-height: 1.5; 
   letter-spacing: 0.32px;
   background-color: #4d5ae5;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .overlay {
+.portfolio-img:hover .portfolio-overlay {
   transform: translateY(0);
 }
 
-.portfolio-item:hover {
+.portfolio-img:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-card-content {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
+@media only screen and (max-width: 768px) {
+  .portfolio-img > img {
+   max-width: 300px;
+  }
 }
 
-.portfolio-pic {
-  display: block;
-  width: 100%;
-  height: auto;
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 
-.portfolio-subtitle {
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.portfolio-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-black-color);
+@media only screen and (min-width: 1440px) {
+  .portfolio-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 
 /* #endregion */
@@ -694,8 +706,15 @@ button {
   align-items: baseline;
 }
 
-.footer-content {
-  margin-right: 120px;
+.footer-block {
+  display: flex;
+}
+
+.footer-row {
+  display: flex;
+  max-width: 1128px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .footer-logo {
@@ -719,10 +738,6 @@ button {
   line-height: 1.5;
   color: #f4f4fd;
   letter-spacing: 0.02em;
-}
-
-.footer-socials {
-  margin-right: 80px;
 }
 
 .footer-socials-icon {
@@ -767,8 +782,7 @@ button {
   letter-spacing: 0.32px;
 }
 
-.subscribe {
-}
+
 .footer-subscribe-text {
   margin-bottom: 16px;
   color: #fff;
@@ -821,8 +835,33 @@ button {
   border: none;
   border-radius: 4px;
 }
-.footer-socials-icon {
-  margin-left: 16px;
+
+@media only screen and (max-width: 768px) {
+  .footer-form {
+   display: flex;
+   flex-direction: column;
+  }
+
+  .footer-row {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    width: 264px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-row {
+    padding-left: 108px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-row {
+   width: 1128px;
+   justify-content: space-between;
+  }
 }
 
 /* #endregion */
